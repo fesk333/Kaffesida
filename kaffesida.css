@@ -10,7 +10,7 @@ body{
     padding: 0px;
     margin: 0px;
     height: 90px;
-    background: linear-gradient(120deg, rgb(0, 234, 255), rgb(42, 42, 196), rgb(42, 42, 196), rgb(0, 140, 255), rgb(42, 42, 196), rgb(0, 187, 255));
+    background: linear-gradient(120deg, rgb(34, 113, 186), rgb(0, 123, 255), rgb(42, 116, 196), rgb(0, 140, 255), rgb(11, 123, 192), rgb(0, 187, 255));
     position: fixed;
     top: 0px;
     width: 100%;
@@ -41,16 +41,40 @@ body{
 .huvudmeny p{
     font-size: 60%;
     color: white;
-    background-color: rgb(42, 42, 196);
     padding: 0px;
     margin: 0px;
 }
-
-.huvudmeny .receptmeny p{
-    display:none;
+.receptmenyitems p{
+    background: linear-gradient(140deg, rgb(3, 148, 252), rgb(42, 116, 196), rgb(42, 116, 196), rgb(3, 152, 252));
+}
+.tutorialsmenyitems p{
+    background: linear-gradient(140deg, rgb(3, 177, 252), rgb(42, 116, 196), rgb(42, 116, 196), rgb(23, 178, 230));
 }
 
-.huvudmeny .receptmeny:hover p{
-    display:block;
+.receptmeny, .tutorialsmeny{
+    position: relative;
 }
 
+.receptmenyitems p, .tutorialsmenyitems p{
+    opacity: 0;
+    pointer-events: auto;
+    font-size: 13%;
+    text-align: center;
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 92%;
+}
+.receptmenyitems p + p, .tutorialsmenyitems p + p{
+    margin-top: 15.2%;
+}
+
+.receptmeny:hover p, .receptmenyitems:hover p{
+    opacity: 1;
+}
+
+.tutorialsmeny:hover p, .tutorailsmenyitems:hover p{
+    opacity: 1;
+
+}
