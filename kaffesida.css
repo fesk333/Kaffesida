@@ -17,6 +17,7 @@ header{
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: 100;
 }
 
 .huvudmeny div{
@@ -90,6 +91,10 @@ header{
     opacity: 1;
     pointer-events: auto;
     cursor: pointer;
+}
+
+#quizmeny{
+    padding-top: 8%;
 }
 
 footer nav{
@@ -276,6 +281,76 @@ tr.note-row:hover {
 
 .espressodef{
     background-image: url("https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg")
+}
+
+.espressodef h2, .espressodef p, .dripdef h2, .dripdef p{
+    color: white;
+    mix-blend-mode: difference;
+    filter: drop-shadow(0px 0px 5px black);
+    position: relative;
+    z-index: 1;
+}
+
+.espressodef h2, .dripdef h2{
+    font-size: 4em;
+}
+.espressodef p, .dripdef p{
+    font-size: 3em;
+    font-style: italic;
+}
+
+.dripdef iframe, .espressodef iframe{
+    border: hsla(34, 72%, 58%, 0.553) solid 0.25rem;
+}
+
+#credits{
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+.bön4{
+    background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBjb2ZmZWV8ZW58MHx8MHx8fDA%3D");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: -2.5%;
+    margin-bottom: -10.1%;
+}
+
+.Quiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+
+    background-color:hsla(34, 72%, 58%, 0.719);
+    padding: 0.5rem;
+    margin: 8rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+
+    padding: 5rem;
+}
+
+.Quiz h2{
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 1;
+}
+
+.Quiz form, .Quiz label, .Quiz input{
+    text-align: left;
+    font-size: 1em;
+
+}
+
+#invisible{
+    display: none;
 }
 
 main h1, h2{

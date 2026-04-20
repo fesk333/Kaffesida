@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <title>Kaffesida</title>
+        <link rel="stylesheet" href="kaffesida.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="huvudmeny"> <!--▲▼-->
+                    <div><a href="kaffesida.html">Kaffesida</a></div>
+
+                    <div class="receptmeny">Recept
+                        <div class="receptmenyitems">
+                            <a href="Recept-och-ratios.html">Recept och Ratios</a>
+                            <a href="Defenitioner.html">Definitioner</a>
+                        </div>
+                    </div>
+                    <div class="tutorialsmeny">Tutorials
+                        <div class="tutorialsmenyitems">
+                            <a href="Tutorialsdrip.html">Drip</a>
+                            <a href="Tutorialsespresso.html">Espresso</a>
+                        </div>
+                    </div>
+
+                    <div id="quizmeny">
+                        <a href="Quiz.html">Quiz</a>
+                    </div>
+
+
+                </div>
+            </nav>
+        </header>
+
+        <main class="bön4">
+            <div class="Quiz">
+                <h2>Quiz: vilket kaffe skulle du föredra?</h2>
+                <form>
+                    <label for="namn" id="invisible">Förnamn</label>
+                    <input type="text" name="namn" placeholder="Namn" required>
+                    <label for="efternamn" id="invisible">Efternamn</label>
+                    <input type="text" name="efternamn" placeholder="Efternamn" required>
+
+                    <br>
+                    <br>
+                    <label for="ofta">Hur ofta dricker du kaffe? (per dag)</label>
+                    <br>
+                    <input type="checkbox" name="ofta" value="1" required>1
+                    <input type="checkbox" name="ofta" value="2" required>2
+                    <input type="checkbox" name="ofta" value="3" required>3
+                    <input type="checkbox" name="ofta" value="4" required>4
+                    <input type="checkbox" name="ofta" value="5" required>5+
+
+                    <br>
+                    <br>
+                    <label for="gillar">Hur mycket gillar du kaffe? (1-100)</label>
+                    <br>
+                    <input type="range" name="gillar" min="1" max="100" required>
+
+                    <br>
+                    <br>
+                    <label for="nuvarande">Hur är din nuvarande kaffeupplevelse?</label>
+                    <br>
+                    <input type="radio" name="nuvarande" value="Väldigt dålig" required>Väldigt dålig
+                    <input type="radio" name="nuvarande" value="Dålig" required>Dålig
+                    <input type="radio" name="nuvarande" value="Neutral" required>Neutral
+                    <input type="radio" name="nuvarande" value="Bra" required>Bra
+                    <input type="radio" name="nuvarande" value="Väldigt bra" required>Väldigt bra
+
+                    <br>
+                    <br>
+                    <label type="bittersur">Hur bittert eller surt är ditt kaffe? (1: sur, 10: bitter)</label>
+                    <br>
+                    <input type="number" name="bittersur" min="1" max="10" step="0.1" required>
+
+                    <br>
+                    <br>
+                    <label type="rostdatum">När var dina senaste bönor rostade?</label>
+                    <br>
+                    <input type="date" name="rostdatum">
+
+                    <br>
+                    <br>
+                    <label type="mail" id="invisible">E-postadress</label>
+                    <input type="email" name="mail" placeholder="E-postadress" required>
+
+                    <br>
+                    <br>
+                    <label type="submit" id="invisible">Skicka in</label>
+                    <input type="submit" value="Skicka in">
+                    <label type="reset" id="invisible">Återställ</label>
+                    <input type="reset" value="Återställ">
+
+
+                </form>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <nav>
+                <div class="bottenmeny">
+                    <div>Kaffesida</div>
+                    <div>Kaffesida@gmail.com</div>
+                    <div>+46 1234 5678</div>
+                    <div>Gamla Norrvägen 6</div>
+                </div>
+            </nav>
+        </footer>
+
+    </body>
+</html>
