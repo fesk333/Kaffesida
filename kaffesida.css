@@ -212,10 +212,15 @@ main .bön2 table, main .bön2 th, main .bön2 td{
     font-size: 500%;
     font-weight: normal;
 }
+
 .bön2 h2{
     color: rgb(195, 195, 195);
     font-size: 300%;
     font-weight: normal;
+}
+
+.bön2 table tr.data-row:nth-child(3n-1), .bön2 table tr.data-row:nth-child(3n){
+    background: rgba(255, 255, 255, 0.543);
 }
 
 .note-row {
@@ -355,4 +360,74 @@ tr.note-row:hover {
 
 main h1, h2{
     font-weight: normal;
+}
+
+
+@media screen and (max-width: 760px) {
+    .huvudmeny {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        width: 100%;
+        padding: 0px 0px;
+    }
+    
+    .huvudmeny > *:first-child {
+        border-bottom: 2px white solid;
+        border-right: none;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .huvudmeny div {
+        font-size: 150%;
+        padding: 0px 0px;
+    }
+
+    .huvudmeny .tutorialsmenyitems a, .huvudmeny .receptmenyitems a {
+        font-size: 35%;
+    }
+    
+    .huvudmeny div:first-child {
+        font-size: 200%;
+        grid-column: span 3;
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+
+    
+    .bottenmeny{
+        height: auto;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .bottenmeny div:first-child{
+        font-size: 200%;
+    }
+
+    .bottenmeny *:not(:first-child){
+        font-size: 80%;
+    }
+    
+    
+    footer nav {
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .bön1 h1 {
+        font-size: 200%;
+    }
+    
+    main .bön1 ul {
+        width: 95%;
+        line-height: 200%;
+    }
+    
+    main .bön1 ul a {
+        font-size: 100%;
+    }
 }
