@@ -21,7 +21,7 @@ header{
 }
 
 .huvudmeny div{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+    font-family: Ranchers, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
     color: rgb(235, 233, 233);
     text-align: center;
     align-content: center;
@@ -115,7 +115,7 @@ footer nav{
 }
 
 .bottenmeny div{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+    font-family: Ranchers, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
     color: rgb(235, 233, 233);
     text-align: center;
     align-content: center;
@@ -223,6 +223,17 @@ main .bön2 table, main .bön2 th, main .bön2 td{
     background: rgba(255, 255, 255, 0.543);
 }
 
+@keyframes MyAnim{
+    0% { 
+        font-size: 10%;
+        height: 0px;
+    }
+    100% { 
+        font-size: inherit;
+        height: 40px;
+    }
+}
+
 .note-row {
     display: none;
 }
@@ -230,13 +241,16 @@ main .bön2 table, main .bön2 th, main .bön2 td{
 tr.data-row:hover + tr.note-row,
 tr.note-row:hover {
     display: table-row;
+    animation-name: MyAnim;
+    animation-duration: 500ms;
+
 }
 
 .note-row td {
-    padding: 12px 8px;
     text-align: center;
     font-size: 140%;
     background: rgba(255,255,255,0.08);
+    height: 0px;
 }
 
 
@@ -351,12 +365,39 @@ tr.note-row:hover {
 .Quiz form, .Quiz label, .Quiz input{
     text-align: left;
     font-size: 1em;
+}
 
+
+input[type="email"]:invalid {
+    border: solid hsl(360, 100%, 50%) 2px;
+}
+
+input[type="checkbox"]{
+    accent-color: darkgreen;
+}
+
+input[type="range"]{
+    appearance: none;
+    border-radius: 50px;
+    width: 100%;
+    height: 7px;
+    accent-color:lightblue;
+    opacity: 0.9;
 }
 
 #invisible{
     display: none;
 }
+
+#kaffeQuiz{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+#kaffeQuiz div{
+    margin-bottom: 4vh;
+}
+
 
 main h1, h2{
     font-weight: normal;

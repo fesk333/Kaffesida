@@ -6,6 +6,7 @@
         <title>Kaffesida</title>
         <link rel="stylesheet" href="kaffesida.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="Kaffesida.js"></script>
     </head>
     <body>
         <header>
@@ -38,68 +39,62 @@
         <main class="bön4">
             <div class="Quiz">
                 <h2>Quiz: vilket kaffe skulle du föredra?</h2>
-                <form>
-                    <label for="namn" id="invisible">Förnamn</label>
-                    <input type="text" name="namn" placeholder="Namn" id="namn" required>
-                    <label for="efternamn" id="invisible">Efternamn</label>
-                    <input type="text" name="efternamn" placeholder="Efternamn" id="efternamn" required>
+                <form name="KaffeForm" onsubmit="return validateForm(event)" method="post">
+                    <div id="kaffeQuiz">
 
-                    <br>
-                    <br>
-                    <label for="ofta">Hur ofta dricker du kaffe? (per dag)</label>
-                    <br>
-                    <input type="checkbox" name="ofta" value="1" id="ofta" required>1
-                    <input type="checkbox" name="ofta" value="2" id="ofta" required>2
-                    <input type="checkbox" name="ofta" value="3" id="ofta" required>3
-                    <input type="checkbox" name="ofta" value="4" id="ofta" required>4
-                    <input type="checkbox" name="ofta" value="5" id="ofta" required>5+
+                        <div>
+                            <label for="namn" id="invisible">Förnamn</label>
+                            <input type="text" name="namn" placeholder="Namn" id="namn">
+                            <label for="efternamn" id="invisible">Efternamn</label>
+                            <input type="text" name="efternamn" placeholder="Efternamn" id="efternamn">
+                        </div>
+                        <div>
+                            <p>Dricker du ofta kaffe?</p>
+                            <label for="inte_ofta" id="invisible">inte ofta</label>
+                            <label for="ofta" id="invisible">ofta</label>
+                            <input type="checkbox" name="inte_ofta" value="inte ofta" id="inte_ofta">inte ofta
+                            <input type="checkbox" name="ofta" value="ofta" id="ofta">ofta
+                        </div>
+                        <div>
+                            <label for="gillar">(Valfritt) Hur mycket gillar du kaffe? (1-100)</label>
+                            <input type="range" name="gillar" min="1" max="100" id="gillar">
+                        </div>
+                        <div>
+                            <label for="nuvarande">(Valfritt) Hur är din nuvarande kaffeupplevelse?</label>
+                            <br>
+                            <input type="radio" name="nuvarande" value="Väldigt dålig" id="nuvarande">Väldigt dålig
+                            <input type="radio" name="nuvarande" value="Dålig" id="nuvarande">Dålig
+                            <input type="radio" name="nuvarande" value="Neutral" id="nuvarande">Neutral
+                            <input type="radio" name="nuvarande" value="Bra" id="nuvarande">Bra
+                            <input type="radio" name="nuvarande" value="Väldigt bra" id="nuvarande">Väldigt bra
+                        </div>
+                        <div>
 
-                    <br>
-                    <br>
-                    <label for="gillar">Hur mycket gillar du kaffe? (1-100)</label>
-                    <br>
-                    <input type="range" name="gillar" min="1" max="100" id="gillar" required>
+                            <label for="bittersur">Hur bittert eller surt är ditt kaffe? (1: sur, 10: bitter)</label>
+                            <br>
+                            <input type="number" name="bittersur" min="1" max="10" step="0.1" id="bittersur">
+                        </div>
+                        <div>
+                            <label for="rostdatum">(Valfritt) När var dina senaste bönor rostade?</label>
+                            <br>
+                            <input type="date" name="rostdatum" id="rostdatum">
+                        </div>
+                        <div>
+                            <label for="mail" id="invisible">E-postadress</label>
+                            <input type="email" name="mail" placeholder="E-postadress" id="mail">
+                        </div>
+                        <div>
+                            <label for="phone" id="invisible">Telefon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Telefonnummer">
+                        </div>
+                        <div>                    
+                            <label for="submit" id="invisible">Skicka in</label>
+                            <input type="submit" value="Skicka in" id="submit">
+                            <label for="reset" id="invisible">Återställ</label>
+                            <input type="reset" value="Återställ" id="reset">
+                        </div>
 
-                    <br>
-                    <br>
-                    <label for="nuvarande">Hur är din nuvarande kaffeupplevelse?</label>
-                    <br>
-                    <input type="radio" name="nuvarande" value="Väldigt dålig" id="nuvarande" required>Väldigt dålig
-                    <input type="radio" name="nuvarande" value="Dålig" id="nuvarande" required>Dålig
-                    <input type="radio" name="nuvarande" value="Neutral" id="nuvarande" required>Neutral
-                    <input type="radio" name="nuvarande" value="Bra" id="nuvarande" required>Bra
-                    <input type="radio" name="nuvarande" value="Väldigt bra" id="nuvarande" required>Väldigt bra
-
-                    <br>
-                    <br>
-                    <label for="bittersur">Hur bittert eller surt är ditt kaffe? (1: sur, 10: bitter)</label>
-                    <br>
-                    <input type="number" name="bittersur" min="1" max="10" step="0.1" id="bittersur" required>
-
-                    <br>
-                    <br>
-                    <label for="rostdatum">När var dina senaste bönor rostade?</label>
-                    <br>
-                    <input type="date" name="rostdatum" id="rostdatum">
-
-                    <br>
-                    <br>
-                    <label for="mail" id="invisible">E-postadress</label>
-                    <input type="email" name="mail" placeholder="E-postadress" id="mail" required>
-
-                    <br>
-                    <br>
-                    <label for="phone" id="invisible">Telefon</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
-
-                    <br>
-                    <br>
-                    <label for="submit" id="invisible">Skicka in</label>
-                    <input type="submit" value="Skicka in" id="submit">
-                    <label for="reset" id="invisible">Återställ</label>
-                    <input type="reset" value="Återställ" id="reset">
-
-
+                    </div>
                 </form>
             </div>
         </main>
