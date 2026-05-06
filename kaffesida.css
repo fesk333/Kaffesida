@@ -3,16 +3,16 @@ body{
     margin: 0px;
 }
 header{
-    margin-bottom: 7%;
+    margin-bottom: 12%;
 }
 
 .huvudmeny{
     display: grid;
-    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     padding: 0px;
     margin: 0px;
-    height: 100px;
+    height: 12vmax;
     background: linear-gradient(120deg, rgb(34, 113, 186), rgb(0, 123, 255), rgb(42, 116, 196), rgb(0, 140, 255), rgb(11, 123, 192), rgb(0, 187, 255));
     position: fixed;
     top: 0px;
@@ -25,7 +25,7 @@ header{
     color: rgb(235, 233, 233);
     text-align: center;
     align-content: center;
-    font-size: 300%;
+    font-size: 5.3vw;
 }
 
 .huvudmeny a, .bottenmeny a{
@@ -39,20 +39,16 @@ header{
 }
 
 .huvudmeny div:first-child, .bottenmeny div:first-child{
-    font-size: 500%;
+    font-size: 9.5vw;
 }
 
 .huvudmeny a{
     display: block;
     width: 100%;
     height: 100%;
-    
-    
-    font-size: 100%;
     color: white;
     padding: 0px;
     margin: 0px;
-    
 }
 
 .receptmenyitems a{
@@ -76,7 +72,7 @@ header{
 .receptmenyitems a, .tutorialsmenyitems a{
     opacity: 0;
     pointer-events: none;
-    font-size: 13%;
+    font-size: 2.5vw;
     text-align: center;
     width: 100%;
     margin: 0px 0px;
@@ -99,7 +95,7 @@ header{
 
 footer nav{
     background: linear-gradient(120deg, rgb(34, 113, 186), rgb(0, 123, 255), rgb(42, 116, 196), rgb(0, 140, 255), rgb(11, 123, 192), rgb(0, 187, 255));
-    height: 120px;
+    height: 13vmax;
     width: 100%;
     padding: 0px;
     margin: 0px;
@@ -108,7 +104,7 @@ footer nav{
 
 .bottenmeny{
     display: grid;
-    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     padding: 0px;
     margin: 0px;
@@ -119,7 +115,7 @@ footer nav{
     color: rgb(235, 233, 233);
     text-align: center;
     align-content: center;
-    font-size: 155%;
+    font-size: 2vw;
 }
 
 .bön1{
@@ -139,7 +135,7 @@ footer nav{
     color: rgb(235, 233, 233);
     text-align: center;
     align-content: center;
-    font-size: 200%;
+    font-size: 2vmax;
     font-weight: normal;
 }
 
@@ -209,7 +205,7 @@ main .bön2 table, main .bön2 th, main .bön2 td{
 }
 
 .bön2 h1{
-    font-size: 500%;
+    font-size: 7vmax;
     font-weight: normal;
 }
 
@@ -354,7 +350,7 @@ tr.note-row:hover {
 }
 
 .Quiz h2{
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     color: white;
     mix-blend-mode: difference;
@@ -502,6 +498,16 @@ main h1, h2{
     }
     .bön2 table tr td, .bön2 table tr th{
         color: #FFFFFF;
+    }
+    @keyframes MyAnim{
+    0% { 
+        font-size: 10%;
+        height: 0px;
+    }
+    100% { 
+        font-size: 1.5vw;
+        height: 40px;
+    }
     }
 
     /* Definitioner */
