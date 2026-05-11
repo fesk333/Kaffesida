@@ -298,7 +298,7 @@ tr.note-row:hover {
     background-image: url("https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg")
 }
 
-.espressodef h2, .espressodef p, .dripdef h2, .dripdef p{
+.espressodef h1, .espressodef p, .dripdef h1, .dripdef p{
     color: white;
     mix-blend-mode: difference;
     filter: drop-shadow(0px 0px 5px black);
@@ -306,7 +306,7 @@ tr.note-row:hover {
     z-index: 1;
 }
 
-.espressodef h2, .dripdef h2{
+.espressodef h1, .dripdef h1{
     font-size: 4em;
 }
 .espressodef p, .dripdef p{
@@ -349,7 +349,7 @@ tr.note-row:hover {
     padding: 5rem;
 }
 
-.Quiz h2{
+.Quiz h1{
     font-size: 3em;
     text-align: center;
     color: white;
@@ -381,7 +381,7 @@ input[type="range"]{
     opacity: 0.9;
 }
 
-#invisible{
+.invisible{
     display: none;
 }
 

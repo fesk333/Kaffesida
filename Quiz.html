@@ -38,20 +38,20 @@
 
         <main class="bön4">
             <div class="Quiz">
-                <h2>Quiz: vilket kaffe skulle du föredra?</h2>
+                <h1>Quiz: vilket kaffe skulle du föredra?</h1>
                 <form name="KaffeForm" onsubmit="return validateForm(event)" method="post">
                     <div id="kaffeQuiz">
 
                         <div>
-                            <label for="namn" id="invisible">Förnamn</label>
+                            <label for="namn" class="invisible">Förnamn</label>
                             <input type="text" name="namn" placeholder="Namn" id="namn">
-                            <label for="efternamn" id="invisible">Efternamn</label>
+                            <label for="efternamn" class="invisible">Efternamn</label>
                             <input type="text" name="efternamn" placeholder="Efternamn" id="efternamn">
                         </div>
                         <div>
                             <p>Dricker du ofta kaffe?</p>
-                            <label for="inte_ofta" id="invisible">inte ofta</label>
-                            <label for="ofta" id="invisible">ofta</label>
+                            <label for="inte_ofta" class="invisible">inte ofta</label>
+                            <label for="ofta" class="invisible">ofta</label>
                             <input type="checkbox" name="inte_ofta" value="inte ofta" id="inte_ofta">inte ofta
                             <input type="checkbox" name="ofta" value="ofta" id="ofta">ofta
                         </div>
@@ -60,13 +60,23 @@
                             <input type="range" name="gillar" min="1" max="100" id="gillar">
                         </div>
                         <div>
-                            <label for="nuvarande">(Valfritt) Hur är din nuvarande kaffeupplevelse?</label>
+                            <p>(Valfritt) Hur är din nuvarande kaffeupplevelse?</p>
                             <br>
-                            <input type="radio" name="nuvarande" value="Väldigt dålig" id="nuvarande">Väldigt dålig
-                            <input type="radio" name="nuvarande" value="Dålig" id="nuvarande">Dålig
-                            <input type="radio" name="nuvarande" value="Neutral" id="nuvarande">Neutral
-                            <input type="radio" name="nuvarande" value="Bra" id="nuvarande">Bra
-                            <input type="radio" name="nuvarande" value="Väldigt bra" id="nuvarande">Väldigt bra
+
+                            <label for="Väldigt_dålig" class="invisible">Väldigt dålig</label>
+                            <input type="radio" name="nuvarande" value="Väldigt dålig" id="Väldigt_dålig">Väldigt dålig
+
+                            <label for="Dålig" class="invisible">Dålig</label>
+                            <input type="radio" name="nuvarande" value="Dålig" id="Dålig">Dålig
+
+                            <label for="Neutral" class="invisible">Neutral</label>
+                            <input type="radio" name="nuvarande" value="Neutral" id="Neutral">Neutral
+
+                            <label for="Bra" class="invisible">Bra</label>
+                            <input type="radio" name="nuvarande" value="Bra" id="Bra">Bra
+
+                            <label for="Väldigt_bra" class="invisible">Väldigt bra</label>
+                            <input type="radio" name="nuvarande" value="Väldigt bra" id="Väldigt_bra">Väldigt bra
                         </div>
                         <div>
 
@@ -80,17 +90,17 @@
                             <input type="date" name="rostdatum" id="rostdatum">
                         </div>
                         <div>
-                            <label for="mail" id="invisible">E-postadress</label>
+                            <label for="mail" class="invisible">E-postadress</label>
                             <input type="email" name="mail" placeholder="E-postadress" id="mail">
                         </div>
                         <div>
-                            <label for="phone" id="invisible">Telefon</label>
+                            <label for="phone" class="invisible">Telefon</label>
                             <input type="tel" id="phone" name="phone" placeholder="Telefonnummer">
                         </div>
                         <div>                    
-                            <label for="submit" id="invisible">Skicka in</label>
+                            <label for="submit" class="invisible">Skicka in</label>
                             <input type="submit" value="Skicka in" id="submit">
-                            <label for="reset" id="invisible">Återställ</label>
+                            <label for="reset" class="invisible">Återställ</label>
                             <input type="reset" value="Återställ" id="reset">
                         </div>
 
