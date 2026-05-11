@@ -42,6 +42,15 @@ header{
     font-size: 9.5vw;
 }
 
+@keyframes notahover{
+    0%{
+        text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 1vw;
+    }
+    100%{
+        text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 0px;
+    }
+}
+
 .huvudmeny a{
     display: block;
     width: 100%;
@@ -49,6 +58,24 @@ header{
     color: white;
     padding: 0px;
     margin: 0px;
+    animation-name: notahover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ahover{
+    0%{
+        text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 0px;
+    }
+    100%{
+        text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 1vw;
+    }
+}
+
+.huvudmeny a:hover, .receptmeny:hover, .tutorialsmeny:hover{
+    animation-name: ahover;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
 }
 
 .receptmenyitems a{
@@ -60,6 +87,9 @@ header{
 
 .receptmeny, .tutorialsmeny{
     position: relative;
+    animation-name: notahover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
 .receptmenyitems, .tutorialsmenyitems{
@@ -298,7 +328,7 @@ tr.note-row:hover {
     background-image: url("https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg")
 }
 
-.espressodef h1, .espressodef p, .dripdef h1, .dripdef p{
+.espressodef h1, .espressodef p, .dripdef h1, .dripdef p, .espressodef h2, .dripdef h2{
     color: white;
     mix-blend-mode: difference;
     filter: drop-shadow(0px 0px 5px black);
@@ -306,9 +336,10 @@ tr.note-row:hover {
     z-index: 1;
 }
 
-.espressodef h1, .dripdef h1{
+.espressodef h1, .dripdef h1, .espressodef h2, .dripdef h2{
     font-size: 4em;
 }
+
 .espressodef p, .dripdef p{
     font-size: 3em;
     font-style: italic;
@@ -358,9 +389,14 @@ tr.note-row:hover {
     z-index: 1;
 }
 
-.Quiz form, .Quiz label, .Quiz input{
+.Quiz form, .Quiz label, .Quiz form input{
     text-align: left;
     font-size: 1em;
+}
+
+input:focus{
+    outline: none;
+    border: solid hsl(34, 100%, 56%) 4px;
 }
 
 
@@ -392,6 +428,11 @@ input[type="range"]{
 }
 #kaffeQuiz div{
     margin-bottom: 4vh;
+}
+.Quiz img{
+    width: 50%;
+    height: auto;
+    border: solid hsl(34, 100%, 56%) 4px;
 }
 
 
