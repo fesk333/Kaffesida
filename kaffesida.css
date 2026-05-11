@@ -209,6 +209,10 @@ main .bön1 ul{
     line-height: 300%;
 }
 
+main .bön1 a:visited{
+    color: rgba(150, 255, 115, 0.74);
+}
+
 main .bön1 ul li:hover{
     background-color: rgba(0,0,0,0.4);
 }
