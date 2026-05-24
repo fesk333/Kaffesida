@@ -78,6 +78,10 @@ header{
     animation-fill-mode: forwards;
 }
 
+.huvudmeny a:active{
+    opacity: 0.7;
+}
+
 .receptmenyitems a{
     background: linear-gradient(140deg, rgb(3, 148, 252), rgb(42, 116, 196), rgb(42, 116, 196), rgb(3, 152, 252));
 }
